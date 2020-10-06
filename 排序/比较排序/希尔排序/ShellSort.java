@@ -8,8 +8,9 @@ public class ShellSort {
         int k = 1;
         
         // 确定递增序列
-        while (k * 3 + 1 < len)
+        while (k * 3 + 1 < len) {
             k = k * 3 + 1;
+        }
         
         // 通过递增序列确定每次使用插入排序的步长，直到步长k = 1时结束
         while (k > 0) {
@@ -25,16 +26,18 @@ public class ShellSort {
         int len = nums.length;
         for (int i = step; i < len; i++) {
             for (int j = i; j >= step; j--) {
-                if (nums[j] > nums[j - step])
+                if (nums[j] > nums[j - step]) {
                     break;
+                }
                 swap(nums, j, j - step);
             }
         }
     }
 
     private static void swap(int[] nums, int i, int j) {
-        if (i == j)
+        if (i == j) {
             return;
+        }
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
