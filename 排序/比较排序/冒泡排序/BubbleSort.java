@@ -14,14 +14,16 @@ public class BubbleSort {
                     flag = false;
                 }
             }
-            if (flag)
+            if (flag) {
                 return;
+            }
         }
     }
 
     private static void swap(int[] nums, int i, int j) {
-        if (i == j)
+        if (i == j) {
             return;
+        }
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
