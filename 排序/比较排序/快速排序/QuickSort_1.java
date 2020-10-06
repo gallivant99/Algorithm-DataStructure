@@ -7,8 +7,9 @@ pubLic class QuickSort_1 {
     }
     
     private static void sort(int[] nums, int low, int high) {
-        if (low >= high)
+        if (low >= high) {
             return;
+        }
         int index = partition(nums, low, high);
         sort(nums, low, index - 1);
         sort(nums, index + 1, high);
@@ -29,8 +30,9 @@ pubLic class QuickSort_1 {
     }
 
     private static void swap(int[] nums, int i, int j) {
-        if (i == j)
+        if (i == j) {
             return;
+        }
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
